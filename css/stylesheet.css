@@ -1,0 +1,108 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Wix+Madefor+Text&display=swap');
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 32px;
+    color: #55009b;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #7503df;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #55009b;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+/* Estilos gerais */
+
+@media screen and (max-width: 768px) {
+    /* Ajustes para telas menores */
+    .header {
+      padding: 15px 20px;
+    }
+  
+    .logo {
+      font-size: 24px;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+  
+    .navbar a {
+      margin: 10px 0;
+      margin-left: 0;
+    }
+  }
+  
+  .body-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  position: relative;
+  }
+
+.body-title::after {
+    content: "";
+    display: block;
+    width: 10%; /* Ajuste conforme necessário */
+    height: 1px;
+    background-color: #ffffff; /* Cor da linha */
+    position: absolute
+    bottom: -5px; /* Ajuste conforme necessário */
+    left: 0;
+}
